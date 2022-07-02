@@ -1,5 +1,6 @@
 {
   "name": "demo-rxjs-in-react-hook",
+  "packageManager": "yarn@1.22.19",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build"

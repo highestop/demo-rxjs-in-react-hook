@@ -63,7 +63,7 @@ function ShowCreateEventData() {
 }
 
 function ShowApp() {
-  const { fireEvent } = useEvent();
+  const eventCenter = useEvent();
 
   useEffect(() => {
     console.log("[App] rendered");
@@ -75,7 +75,7 @@ function ShowApp() {
   const fireEventCb = useCallback((eventType: EventType) => {
     const ts = Date.now().toString();
     console.warn("[App] fireEventCb", eventType, ts);
-    fireEvent({ type: eventType, data: ts });
+    eventCenter.fireEvent({ type: eventType, data: ts });
   }, []);
 
   return (
